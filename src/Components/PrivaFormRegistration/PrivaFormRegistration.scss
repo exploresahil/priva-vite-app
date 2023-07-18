@@ -1,0 +1,144 @@
+@use "../../Veriables.scss" as v;
+
+label {
+  font-size: 1.2rem;
+}
+
+input {
+  padding: 0 20px;
+  width: auto;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.375);
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  font-size: 1rem;
+  color: v.$light;
+
+  background: url("./png/star.png") no-repeat 95% 50% rgba(0, 0, 0, 0.375);
+  background-size: 10px;
+
+  &:focus:invalid {
+    background: url("./png/excla.png") no-repeat 95% 50% rgba(0, 0, 0, 0.375);
+    background-size: 10px;
+    outline: 2px solid v.$yellow;
+  }
+
+  &:required:focus:valid {
+    background: url("./png/valid.png") no-repeat 95% 50% rgba(0, 0, 0, 0.375);
+    background-size: 10px;
+    outline: 2px solid v.$green;
+  }
+
+  &:required:valid {
+    background: url("./png/valid.png") no-repeat 95% 50% rgba(0, 0, 0, 0.375);
+    background-size: 10px;
+  }
+}
+
+.registration-form {
+  height: calc(100vh - 160px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .registration-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //align-items: center;
+    gap: 2em;
+
+    outline: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.375);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
+    padding: 2.5em;
+
+    .form-title {
+      margin-right: auto;
+    }
+
+    .registration-form-container-lable {
+      display: grid;
+      gap: 1em;
+      grid-template-columns: 150px 120px 60px 200px;
+      align-items: center;
+    }
+
+    .mob-no {
+      select {
+        height: 40px;
+        padding: 0 20px;
+        grid-column: 2/3;
+        border-radius: 5px;
+        outline: none;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.375);
+        box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        font-size: 1rem;
+        color: v.$light;
+        background: url("./png/down.png") 90% 50% no-repeat rgba(0, 0, 0, 0.375);
+        appearance: none;
+        background-size: 15px;
+
+        option {
+          border-radius: 5px;
+          outline: none;
+          border-radius: 10px;
+          background: rgba(0, 0, 0, 0.375);
+          box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.125);
+        }
+      }
+      input {
+        grid-column: 3/5;
+      }
+    }
+  }
+  .one-input {
+    width: auto;
+    grid-column: 2/5;
+  }
+  .fname {
+    grid-column: 2/4;
+  }
+}
+
+.buttons {
+  padding-top: 2em;
+  border-top: 1px solid v.$dark;
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+
+  button {
+    cursor: pointer;
+
+    width: 100px;
+
+    border-radius: 10px;
+    outline: none;
+    background-color: v.$light;
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    color: v.$blue;
+    padding: 8px 20px;
+    font-size: 1em;
+
+    &:hover,
+    &:active {
+      background: rgba(255, 255, 255, 0.375);
+      box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.125);
+
+      color: v.$light;
+    }
+  }
+}

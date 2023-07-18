@@ -1,0 +1,13 @@
+@use "../../../Veriables.scss" as v;
+
+.charger-connected-container {
+  h3 {
+    font-family: v.$bebas;
+    color: v.$green;
+    width: min-content;
+    font-size: 6em;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+}

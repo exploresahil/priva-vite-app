@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                 String             @id @default(uuid())
+  first_name         String
+  last_name          String
+  mobile_number      String             @unique
+  email              String             @unique
+  role               User_role
+  password           String
+  Charging_history   Charging_history?  @relation(fields: [charging_historyId], references: [id])
+  charging_historyId String?
+  Charging_station   Charging_station[]
+}
+
+model Charging_history {
+  id             String             @id @default(uuid())
+  user           User[]
+  charing_mod    String
+  charing_value  String
+  charing_state  charing_state_enum
+  payment_method pay
+  charing_from   String
+  charing_to     String
+  is_pay         Boolean
+  date_time      DateTime           @default(now())
+
+  Charging_station   Charging_station? @relation(fields: [charging_stationId], references: [id])
+  charging_stationId String?
+}
+
+model Charging_station {
+  id               String             @id @default(uuid())
+  loction          String
+  owner            User               @relation(fields: [userId], references: [id])
+  userId           String
+  Charging_history Charging_history[]
+}
+
+enum pay {
+  UPI
+}
+
+enum charing_state_enum {
+  full
+  stop
+}
+
+enum User_role {
+  super_admin
+  owners
+  customers
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./dist/style.css" />
+  <title>Priva</title>
+</head>
+
+<body>
+  <header class="flex flex-jc-sb flex-ai-ctr">
+    <h2>Priva</h2>
+    <div class="brand-full-name flex flex-ai-ctr flex-jc-ctr">
+      <p>Priva Technologies pvt. Ltd.</p>
+    </div>
+    <div class="time">
+      <div id="current-date"></div>
+      <div id="current-time"></div>
+    </div>
+  </header>
+
+  <main id="mainReady" class="flex flex-jc-ctr flex-ai-ctr flex-fd-col">
+    <h3>Hello, I am</h3>
+    <h2 class="ready">Ready</h2>
+    <h2 class="ready-after">Ready</h2>
+    <h3>To Charge your Vehicle</h3>
+    <p>please plug in the charger</p>
+  </main>
+
+  <div id="regPop" class="registrations hidden">
+    <div class="register_card sign-up_card">
+      <img src="./assets/svg/user-plus-solid.svg">
+      <h3>Register</h3>
+      <p>One time register only</p>
+    </div>
+    <div class="register_card log-in_card">
+      <img src="./assets/svg/user-solid.svg">
+      <h3>Login</h3>
+      <p>For already registerd user</p>
+    </div>
+  </div>
+
+  <footer class="flex flex-jc-sb flex-ai-ctr">
+    <button id="help" title="Tap to get help">Help</button>
+    <a href="#" id="openPopupNotComp" title="This is for logic only">'IF NOT COMPATIBLE'</a>
+    <a href="#" id="openPopup" title="This is for logic only">'IF PLUGED IN'</a>
+    <button id="language" title="Tap to change language">Language</button>
+    <div class="aurora"></div>
+    <div id="popupFive" class="hidden">
+      <p>Charger Connected</p>
+    </div>
+    <div id="popupNotComp" class="warning hidden">
+      <p>Connection Failed</p>
+    </div>
+    <audio class="myAudio" id="chargerConnected" src="./assets/audio/charger_connected.mp3"></audio>
+    <audio class="myAudio" id="hello" src="./assets/audio/hello.mp3" autoplay></audio>
+    <audio class="myAudio" id="connectionFailed" src="./assets/audio/connection_failed.mp3"></audio>
+    <div id="helpPopup" class="hidden">
+      <div class="help_header">
+        <h2>PRIVA <span>Help</span></h2>
+
+        <p id="helpClose">🞣</p>
+      </div>
+      <p>
+        1. Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book.
+      </p>
+      <p>
+        2. Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book.
+      </p>
+      <p>
+        3. Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book.
+      </p>
+      <p>
+        4. Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book.
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+
+  <script type="text/javascript" src="./dist/script.js"></script>
+  <script type="text/javascript" src="./dist/plugged.js"></script>
+  <script type="text/javascript" src="./dist/notPlugged.js"></script>
+  <script type="text/javascript" src="./dist/gsapSplit.js"></script>
+  <script type="text/javascript" src="./dist/mobileNumber.js"></script>
+  <script type="text/javascript" src="./dist/playHello.js"></script>
+  <script type="text/javascript" src="./dist/helpHome.js"></script>
+  <script type="text/javascript" src="./dist/audioPlayPause.js"></script>
+  <script src="./dist/registerationPopup.js"></script>
+
+</body>
+
+</html>

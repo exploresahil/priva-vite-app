@@ -1,0 +1,170 @@
+@use "../../Veriables.scss" as v;
+
+.charging-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+
+  .battery-container-main {
+    position: relative;
+    width: 500px;
+    height: 200px;
+    z-index: 6;
+    border-radius: 15px;
+    padding: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .battery-visual {
+      position: absolute;
+      width: 510px;
+      height: 210px;
+      background: linear-gradient(
+        rgba(255, 255, 255, 1) 0%,
+        rgba(30, 30, 30, 1) 25%,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(30, 30, 30, 1) 75%,
+        rgba(255, 255, 255, 1) 100%
+      );
+      opacity: 0.5;
+      mix-blend-mode: screen;
+      border-radius: 20px;
+    }
+
+    .battery-container {
+      width: 100%;
+      height: 100%;
+      //background-color: red;
+      border-radius: 20px;
+      overflow: hidden;
+
+      .battery-level {
+        height: 100%;
+        transition: all 200ms ease-in-out;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+.battery-visual-plus {
+  position: absolute;
+  background: linear-gradient(
+    rgba(255, 255, 255, 1) 0%,
+    rgba(30, 30, 30, 1) 25%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(30, 30, 30, 1) 75%,
+    rgba(255, 255, 255, 1) 100%
+  );
+
+  width: 10px;
+  height: 100px;
+  right: -10px;
+  bottom: 43%;
+  opacity: 0.5;
+  mix-blend-mode: screen;
+}
+
+.percentage {
+  position: absolute;
+  z-index: 55;
+  font-family: v.$bebas;
+  font-size: 2.5rem;
+  font-weight: 100;
+  top: 20%;
+}
+
+.remainimg-time {
+  position: absolute;
+  font-weight: 500;
+  bottom: 23%;
+}
+
+.power {
+  position: absolute;
+  font-weight: 500;
+  bottom: 17%;
+}
+
+#chargingSlider {
+  border: none !important;
+  appearance: none !important;
+  webkit-appearance: none !important;
+  margin: 10px 0;
+  height: 3em;
+  outline: none;
+  background: none;
+  box-shadow: none;
+  width: 25vw;
+
+  position: absolute;
+  bottom: 2%;
+}
+
+#chargingSlider::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  border-radius: 2em;
+  background: v.$yellow;
+  cursor: pointer;
+  width: 2em;
+  height: 1.2em;
+
+  &:hover,
+  &:focus {
+    background: v.$blue;
+  }
+}
+
+#chargingSlider::-moz-range-track {
+  cursor: pointer;
+  background: v.$light;
+  border-radius: 2em;
+  height: 0.2em !important;
+}
+
+.stopBtn {
+  display: flex;
+  gap: 0.4em;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 100px;
+  right: 10vw;
+  cursor: pointer;
+
+  width: 100px;
+
+  border-radius: 10px;
+  outline: none;
+  background-color: v.$red;
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  color: v.$light;
+  padding: 8px 20px;
+  font-size: 1em;
+
+  &:hover,
+  &:active {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
+    color: v.$blue;
+  }
+}
+
+.titleCharging {
+  position: absolute;
+  top: 8%;
+  font-family: v.$bebas;
+  font-size: 4rem;
+  color: v.$green;
+  letter-spacing: 2px;
+}

@@ -1,0 +1,101 @@
+@use "../../Veriables.scss" as v;
+
+.registration-container {
+  height: calc(100vh - 160px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+
+  color: v.$dark;
+
+  .cards {
+    position: relative;
+    width: 40vw;
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.2em;
+
+    background: rgba(2, 0, 0, 0.375);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    h2 {
+      margin-right: auto;
+      margin-left: 90px;
+      color: v.$light;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .close_ico {
+      width: 60px;
+      position: absolute;
+      height: 25px;
+      top: 55px;
+      right: 80px;
+      cursor: pointer;
+    }
+  }
+
+  .registration-content {
+    display: flex;
+    gap: 4em;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      padding: 20px;
+      background: v.$light;
+      border-radius: 20px;
+
+      height: 180px;
+
+      img {
+        margin-top: 15px;
+        height: 100px;
+      }
+
+      h3 {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: v.$dark;
+      }
+
+      .plus_ico {
+        transform: translateX(16px);
+      }
+
+      p {
+        border-top: 1px solid v.$dark;
+        margin-bottom: -8px;
+        padding-top: 10px;
+        font-size: 0.6rem;
+        width: 150px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: auto;
+        color: v.$dark;
+      }
+
+      &:hover {
+        background: v.$yellow;
+      }
+    }
+  }
+}

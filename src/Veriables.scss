@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+//*----------> Colors
+
+$dark: hsl(0, 0%, 0%);
+$light: hsl(0, 0%, 100%);
+
+$yellow: #fbbc04;
+$blue: #4285f4;
+$red: #ea4335;
+$green: #34a853;
+
+$mid: #f3f3f3;
+$mid-ft: #a7b2bd;
+
+//*----------> Fonts
+
+$bebas: "Bebas Neue", sans-serif;
+$roboto: "Roboto", sans-serif;
+
+//*----------> Cards
+
+$background: rgba(255, 255, 255, 0.375);
+$shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+$border: 1px solid rgba(255, 255, 255, 0.125);
+
+//*----------> Spaces
+
+$padding: 0 10vw;
+
+//*----------> Main Div
+
+.privaMainDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 160px);
+  width: 100vw;
+}

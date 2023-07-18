@@ -1,0 +1,57 @@
+@use "../../Veriables.scss" as v;
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  height: 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 10vw;
+
+  .footer_btn {
+    background-color: v.$light;
+    border: none;
+
+    border-radius: 20px;
+
+    padding: 0.5em 1.5em;
+
+    font-family: v.$roboto;
+    font-size: 1rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      background-color: v.$blue;
+    }
+  }
+
+  .pluggedIn_btn,
+  .not_compatible_btn {
+    background: none;
+    border: 1px solid v.$yellow;
+    color: v.$light;
+
+    &:hover,
+    &:active {
+      background-color: v.$light;
+      color: v.$blue;
+      border: none;
+    }
+  }
+  .settings,
+  .language-home {
+    display: flex;
+    gap: 1em;
+  }
+}

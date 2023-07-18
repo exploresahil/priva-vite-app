@@ -1,0 +1,82 @@
+@use "../../Veriables.scss" as v;
+
+.charge-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+  padding: 2em 3em;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(0, 0, 0, 0.375);
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+
+  .options {
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.5em !important;
+    border-bottom: 1px solid v.$light;
+  }
+
+  button {
+    cursor: pointer;
+    width: 100px;
+    padding: 15px 10px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+
+    margin-bottom: 2px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.375);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
+    color: v.$light;
+
+    &:hover,
+    &:active {
+      background-color: v.$light;
+      box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.125);
+      color: v.$blue;
+    }
+  }
+}
+
+.select-charge-option-select {
+  display: none !important;
+  padding-bottom: 5em !important;
+}
+
+.activeOption {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.statush2 {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 0.5em !important;
+  border-bottom: 1px solid v.$light;
+}
+
+.buttonOption {
+  display: flex;
+  gap: 1em;
+}
+
+.selectedOption {
+  background-color: v.$light !important;
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.125) !important;
+  color: v.$blue !important;
+}

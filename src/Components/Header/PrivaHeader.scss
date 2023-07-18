@@ -1,0 +1,61 @@
+@use "../../Veriables.scss" as v;
+
+.header {
+  width: auto;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 10vw;
+
+  position: relative;
+
+  img {
+    height: 2em;
+  }
+
+  .brand-full-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto auto;
+    width: 350px;
+    height: 50%;
+
+    border-radius: 20px;
+
+    background: v.$background;
+    box-shadow: v.$shadow;
+    border: v.$border;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.fullScreenButton {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+
+  background: none;
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+  width: 4em;
+  height: 4em;
+  opacity: 0;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.fullScreen {
+  height: 1.5em !important;
+}

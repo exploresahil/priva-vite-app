@@ -1,0 +1,74 @@
+@use "../../Veriables.scss" as v;
+
+.privaMain {
+  height: calc(100vh - 160px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    font-family: v.$bebas;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin: 0 0 10px 0;
+
+    text-transform: uppercase;
+
+    &:nth-of-type(2) {
+      margin: -10px 0 0 0;
+    }
+  }
+
+  .ready__container {
+    position: relative;
+    flex-direction: column;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    h2 {
+      inset: 0;
+      margin: 0 auto;
+      font-family: v.$bebas;
+      font-size: 20rem;
+      clip-path: polygon(0 0%, 100% 0%, 100% 73%, 0% 73%);
+
+      &:nth-of-type(2) {
+        top: -83px;
+        position: absolute;
+        color: v.$yellow;
+        clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 90%);
+        //display: none;
+        //background-color: rgba(0, 255, 123, 0.443);
+      }
+    }
+  }
+
+  p {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: v.$yellow;
+  }
+}
+
+.ready {
+  background-image: url(../../assets/png/flag.png);
+  background-clip: text;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 45%;
+  color: transparent;
+}
+
+.ready-after {
+  background-image: url(../../assets/png/flag.png);
+  background-clip: text;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 80%;
+  color: transparent !important;
+}

@@ -1,0 +1,97 @@
+@use "../../Veriables.scss" as v;
+
+.userDetailsContainer {
+  //width: 40vw;
+  //height: 350px;
+  padding: 2em;
+
+  border-radius: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.375);
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+
+  position: relative;
+
+  img {
+    height: 1.5em;
+    position: absolute;
+
+    right: 2em;
+    top: 2.1em;
+  }
+
+  .title {
+    padding-bottom: 0.4em;
+    border-bottom: 1px solid v.$light;
+  }
+
+  .userDetials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+    border-bottom: 1px solid v.$light;
+    padding: 1em 0;
+
+    h3 {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1em;
+
+      span {
+        color: v.$yellow;
+      }
+
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .historyTitle {
+    padding: 0.8em 0;
+    font-size: 1.2em;
+  }
+
+  .historyContainerMain {
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.375);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
+    overflow-y: auto;
+
+    .historyContainer {
+      //display: flex;
+      //flex-direction: column;
+
+      .history {
+        height: 20px;
+        border-radius: 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        //min-width: 300px;
+
+        margin: 1em 0;
+        padding: 0 1.5em;
+
+        color: v.$light;
+
+        h3 {
+          font-size: 1.1em;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  border: none;
+  padding-top: 1.4em;
+}
